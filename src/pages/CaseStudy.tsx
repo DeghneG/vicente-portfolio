@@ -23,7 +23,8 @@ export default function CaseStudy() {
   const details = [
     { label: 'Role', value: project.role },
     { label: 'Timeline', value: project.timeline },
-    { label: 'Tools', value: project.tools },
+    { label: 'Design tools', value: project.tools },
+    ...(project.techStack ? [{ label: 'Tech stack', value: project.techStack }] : []),
   ]
 
   return (
@@ -39,11 +40,22 @@ export default function CaseStudy() {
       <section className="mt-10">
         <SectionTitle>Problem &amp; summary</SectionTitle>
         <p data-reveal className="max-w-2xl text-lg">{project.summary}</p>
+        {project.github && (
+          <a
+            data-reveal
+            href={project.github}
+            target="_blank"
+            rel="noreferrer"
+            className="btn btn-ghost mt-6"
+          >
+            View on GitHub ↗
+          </a>
+        )}
       </section>
 
       <section className="mt-14">
         <SectionTitle>At a glance</SectionTitle>
-        <dl className="m-0 grid gap-4 sm:grid-cols-3">
+        <dl className={`m-0 grid gap-4 ${details.length > 3 ? 'sm:grid-cols-2' : 'sm:grid-cols-3'}`}>
           {details.map((d) => (
             <div key={d.label} data-reveal className="card p-5">
               <dt className="text-sm font-bold uppercase tracking-widest text-berry">{d.label}</dt>
@@ -55,14 +67,18 @@ export default function CaseStudy() {
 
       <section className="mt-14">
         <SectionTitle>Wireframes &amp; visuals</SectionTitle>
-        <div data-reveal className="card grid min-h-48 place-items-center border-dashed p-6 text-center">
-          Add wireframes, prototypes, and screenshots here.
-        </div>
-      </section>
-
-      <section className="mt-14">
-        <SectionTitle>Deliverables &amp; metrics</SectionTitle>
-        <p data-reveal className="max-w-2xl text-lg">Add final deliverables and measurable outcomes here.</p>
+        {project.image ? (
+          <img
+            data-reveal
+            src={project.image}
+            alt={project.imageAlt ?? ''}
+            className="card w-full p-2"
+          />
+        ) : (
+          <div data-reveal className="card grid min-h-48 place-items-center border-dashed p-6 text-center">
+            Add wireframes, prototypes, and screenshots here.
+          </div>
+        )}
       </section>
 
       <nav aria-label="Project navigation" data-reveal className="mt-16 flex justify-between gap-4">

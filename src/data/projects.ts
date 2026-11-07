@@ -7,8 +7,15 @@ export type Project = {
   category: Category
   role: string
   tools: string
+  /** Languages and frameworks the project was built with, if known */
+  techStack?: string
   timeline: string
   summary: string
+  /** Source code repository, if public */
+  github?: string
+  /** Screenshot in /public, shown on the card and the case study */
+  image?: string
+  imageAlt?: string
 }
 
 const role = 'UI/UX Designer'
@@ -64,6 +71,10 @@ export const projects: Project[] = [
     tools,
     timeline: 'Update me',
     summary: 'Describe the problem ClassBridge solves and summarize the project here.',
+    techStack: 'JavaScript, CSS, HTML',
+    github: 'https://github.com/mirei-sayo/ClassBridge',
+    image: '/projects/classbridge.png',
+    imageAlt: 'ClassBridge sign-in screen: a dark card with the ClassBridge logo, student email and password fields, and an orange Sign In button.',
   },
   {
     slug: 'spotter-campus-tracker',
@@ -74,6 +85,10 @@ export const projects: Project[] = [
     tools,
     timeline: 'Update me',
     summary: 'Describe the problem Spotter Campus Tracker solves and summarize the project here.',
+    techStack: 'HTML, Python, CSS, JavaScript',
+    github: 'https://github.com/mirei-sayo/spotter-campus-tracker',
+    image: '/projects/spotter-campus-tracker.png',
+    imageAlt: 'Spotter login screen: a dark page with the headline "Leave it. Track it. Score it back." and a Welcome to Spotter sign-in card.',
   },
   {
     slug: 'laundry-shop-management-system',
@@ -83,6 +98,7 @@ export const projects: Project[] = [
     role,
     tools,
     timeline: 'Update me',
+    github: 'https://github.com/JustineSalinas/Laundry-Shop-Management-System',
     summary: 'Describe the problem the Laundry Shop Management System solves and summarize the project here.',
   },
 ]

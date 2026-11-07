@@ -100,7 +100,7 @@ export default function Home() {
           I'm a student developer who loves turning ideas into friendly, usable interfaces. I care about
           accessibility, good motion, and details people notice without being told.
         </p>
-        <div className="mt-8 grid gap-6 sm:grid-cols-3">
+        <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {skillGroups.map((g) => (
             <div key={g.name} data-reveal>
               <h3 className="m-0 mb-3 text-2xl text-berry">{g.name}</h3>

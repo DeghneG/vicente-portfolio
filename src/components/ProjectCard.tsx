@@ -13,12 +13,21 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
         aria-hidden="true"
         className="absolute -top-3 left-1/2 h-6 w-20 -translate-x-1/2 -rotate-3 rounded-sm bg-petal/80"
       />
-      <div
-        aria-hidden="true"
-        className="grid aspect-[4/3] place-items-center rounded-xl bg-blush text-sm font-bold text-berry"
-      >
-        Image placeholder
-      </div>
+      {project.image ? (
+        <img
+          src={project.image}
+          alt={project.imageAlt ?? ''}
+          loading="lazy"
+          className="aspect-[4/3] w-full rounded-xl object-cover"
+        />
+      ) : (
+        <div
+          aria-hidden="true"
+          className="grid aspect-[4/3] place-items-center rounded-xl bg-blush text-sm font-bold text-berry"
+        >
+          Image placeholder
+        </div>
+      )}
       <h3 className="m-0 mt-5 text-4xl text-berry">{project.title}</h3>
       <p className="mb-0 mt-2">{project.blurb}</p>
       <p className="mb-0 mt-5 font-bold text-berry">View more →</p>

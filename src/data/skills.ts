@@ -1,5 +1,9 @@
-/** Everything used to build this website, grouped by role. */
+/** Design tools and everything used to build this website, grouped by role. */
 export const skillGroups = [
+  {
+    name: 'Design',
+    items: ['Figma', 'Canva', 'Stitch', 'Ibis Paint'],
+  },
   {
     name: 'Front end',
     items: ['React', 'TypeScript', 'HTML & CSS', 'Tailwind CSS', 'React Router', 'GSAP', 'ScrollTrigger'],
