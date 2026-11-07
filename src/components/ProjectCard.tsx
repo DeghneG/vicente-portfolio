@@ -1,6 +1,6 @@
 import type { CSSProperties } from 'react'
 import { Link } from 'react-router-dom'
-import type { Project } from '../data/projects'
+import { projectHref, type Project } from '../data/projects'
 
 const tilts = ['-2.5deg', '1.8deg', '-1.2deg']
 
@@ -21,17 +21,13 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
       </div>
       <h3 className="m-0 mt-5 text-4xl text-berry">{project.title}</h3>
       <p className="mb-0 mt-2">{project.blurb}</p>
-      <p className="mb-0 mt-5 font-bold text-berry">{project.href ? 'View more →' : 'Coming soon'}</p>
+      <p className="mb-0 mt-5 font-bold text-berry">View more →</p>
     </>
   )
   const base = 'card sticker relative block h-full p-4 pb-6 text-plum no-underline'
-  return project.href ? (
-    <Link to={project.href} data-reveal style={style} className={base}>
+  return (
+    <Link to={projectHref(project)} data-reveal style={style} className={base}>
       {inner}
     </Link>
-  ) : (
-    <div data-reveal style={style} className={`${base} border-dashed`}>
-      {inner}
-    </div>
   )
 }

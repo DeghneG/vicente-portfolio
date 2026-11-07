@@ -1,4 +1,4 @@
-import { NavLink, Link, Outlet, useLocation } from 'react-router-dom'
+import { NavLink, Link, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { useEffect } from 'react'
 import { Bow } from './Bow'
 import { Melody } from './Melody'
@@ -7,12 +7,16 @@ import { PageTransition } from './PageTransition'
 const nav = [
   { to: '/', label: 'Home', end: true },
   { to: '/about', label: 'About' },
-  { to: '/work', label: 'Work' },
+  { to: '/multimedia', label: 'Multimedia' },
+  { to: '/personal', label: 'Personal' },
   { to: '/contact', label: 'Contact' },
 ]
 
 export function Layout() {
   const { pathname } = useLocation()
+  const navigate = useNavigate()
+  // react-router stores the position in the history stack; 0 means this is the first page visited
+  const canGoBack = (window.history.state?.idx ?? 0) > 0
   useEffect(() => {
     window.scrollTo(0, 0)
   }, [pathname])
@@ -51,6 +55,17 @@ export function Layout() {
       </header>
 
       <main id="main">
+        {pathname !== '/' && (
+          <div className="mx-auto max-w-5xl px-5 pt-6">
+            <button
+              type="button"
+              onClick={() => (canGoBack ? navigate(-1) : navigate('/'))}
+              className="cursor-pointer rounded-full border-2 border-petal bg-white px-4 py-1.5 font-bold text-berry hover:bg-blush"
+            >
+              ← Back
+            </button>
+          </div>
+        )}
         <Outlet />
       </main>
 
@@ -60,7 +75,8 @@ export function Layout() {
           <FooterCol title="Quick links">
             <Link to="/"><HomeIcon />Home</Link>
             <Link to="/about"><UserIcon />About</Link>
-            <Link to="/work"><BriefcaseIcon />Work</Link>
+            <Link to="/multimedia"><BriefcaseIcon />Multimedia projects</Link>
+            <Link to="/personal"><BriefcaseIcon />Personal projects</Link>
             <Link to="/contact"><MailIcon />Contact</Link>
           </FooterCol>
           <FooterCol title="Secondary links">

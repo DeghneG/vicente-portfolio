@@ -3,21 +3,21 @@ import { useReveal } from '../hooks/useReveal'
 import { ProjectCard } from '../components/ProjectCard'
 import { Melody } from '../components/Melody'
 import { PageMeta } from '../components/PageMeta'
-import { projects, type Category } from '../data/projects'
+import { personalProjects, type Category } from '../data/projects'
 
-const filters: Array<'All' | Category> = ['All', 'Web Apps', 'Games']
+const filters: Array<'All' | Category> = ['All', 'Capstone', 'Personal']
 
-export default function Work() {
+export default function Personal() {
   const [filter, setFilter] = useState<(typeof filters)[number]>('All')
-  const shown = projects.filter((p) => filter === 'All' || p.category === filter)
+  const shown = personalProjects.filter((p) => filter === 'All' || p.category === filter)
   const ref = useReveal<HTMLDivElement>({ start: 'top 95%' })
 
   return (
-    <div ref={ref} className="relative mx-auto max-w-5xl px-5 pt-16">
-      <PageMeta title="Work" path="/work" description="Placeholder: web apps and games, from prelim to final." />
+    <div ref={ref} className="relative mx-auto max-w-5xl px-5 pt-8">
+      <PageMeta title="Personal Projects" path="/personal" description="Personal UI/UX projects outside of coursework." />
       <Melody float rotate={-6} flip className="absolute right-6 top-6 w-20 sm:w-32" />
-      <h1 data-reveal className="m-0 text-6xl sm:text-8xl"><mark className="hl">Work</mark></h1>
-      <p data-reveal className="mt-3 max-w-xl text-lg">Coursework and projects, from prelim to final.</p>
+      <h1 data-reveal className="m-0 text-5xl sm:text-7xl"><mark className="hl">Personal Projects</mark></h1>
+      <p data-reveal className="mt-3 max-w-xl text-lg">My capstone and the projects I designed on my own.</p>
 
       <div data-reveal role="group" aria-label="Filter projects" className="mt-8 flex flex-wrap gap-2">
         {filters.map((f) => (
@@ -37,15 +37,8 @@ export default function Work() {
 
       <div className="mt-12 grid gap-8 sm:grid-cols-3">
         {shown.map((p, i) => (
-          <ProjectCard key={p.title} project={p} index={i} />
+          <ProjectCard key={p.slug} project={p} index={i} />
         ))}
-      </div>
-      {shown.length === 0 && <p className="mt-8">Nothing here yet</p>}
-
-      {/* Sitemap: "Future case studies" (planned page, /work/project-title) */}
-      <div data-reveal className="card mt-8 border-dashed p-6">
-        <h2 className="m-0 text-2xl text-berry">Future case studies</h2>
-        <p className="mb-0 mt-2">More case studies are planned. Check back soon</p>
       </div>
     </div>
   )

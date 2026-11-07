@@ -8,8 +8,6 @@ import { Melody } from '../components/Melody'
 import { Marquee } from '../components/Marquee'
 import { PageMeta } from '../components/PageMeta'
 import { SectionTitle } from '../components/SectionTitle'
-import { ProjectCard } from '../components/ProjectCard'
-import { projects } from '../data/projects'
 import { skillGroups } from '../data/skills'
 
 
@@ -54,7 +52,7 @@ export default function Home() {
             I design and build web apps and games with a soft touch and sharp details.
           </p>
           <div data-reveal className="mt-8 flex flex-wrap gap-3">
-            <Link to="/work" className="btn">See my work</Link>
+            <Link to="/multimedia" className="btn">See my work</Link>
             <Link to="/contact" className="btn btn-ghost">Say hello</Link>
           </div>
         </div>
@@ -78,12 +76,19 @@ export default function Home() {
 
       <section aria-labelledby="featured">
         <SectionTitle>
-          <span id="featured">Projects</span>
+          <span id="featured">My Projects</span>
         </SectionTitle>
-        <div className="grid gap-8 sm:grid-cols-3">
-          {projects.map((p, i) => (
-            <ProjectCard key={p.title} project={p} index={i} />
-          ))}
+        <div className="grid gap-8 sm:grid-cols-2">
+          <Link to="/multimedia" data-reveal className="card sticker block p-8 text-plum no-underline">
+            <h3 className="m-0 text-4xl text-berry">Multimedia Projects</h3>
+            <p className="mb-0 mt-2">Prelim, Midterm and Final projects.</p>
+            <p className="mb-0 mt-5 font-bold text-berry">View projects →</p>
+          </Link>
+          <Link to="/personal" data-reveal className="card sticker block p-8 text-plum no-underline">
+            <h3 className="m-0 text-4xl text-berry">Personal Projects</h3>
+            <p className="mb-0 mt-2">Capstone, ClassBridge, Spotter Campus Tracker and Laundry Shop Management System.</p>
+            <p className="mb-0 mt-5 font-bold text-berry">View projects →</p>
+          </Link>
         </div>
       </section>
 

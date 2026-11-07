@@ -19,7 +19,11 @@
 
 :root { color-scheme: light; }
 
-html { scroll-behavior: smooth; }
+html {
+  scroll-behavior: smooth;
+  /* full-bleed sections use 100vw, which is wider than the page when a scrollbar shows */
+  overflow-x: clip;
+}
 
 body {
   margin: 0;

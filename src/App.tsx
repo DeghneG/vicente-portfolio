@@ -1,9 +1,10 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import Home from './pages/Home'
 import About from './pages/About'
-import Work from './pages/Work'
-import RideSentinel from './pages/RideSentinel'
+import Multimedia from './pages/Multimedia'
+import Personal from './pages/Personal'
+import CaseStudy from './pages/CaseStudy'
 import Contact from './pages/Contact'
 import Privacy from './pages/Privacy'
 
@@ -14,8 +15,10 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
-          <Route path="work" element={<Work />} />
-          <Route path="work/ridesentinel" element={<RideSentinel />} />
+          <Route path="multimedia" element={<Multimedia />} />
+          <Route path="personal" element={<Personal />} />
+          <Route path="work" element={<Navigate to="/multimedia" replace />} />
+          <Route path="work/:slug" element={<CaseStudy />} />
           <Route path="contact" element={<Contact />} />
           <Route path="privacy" element={<Privacy />} />
           <Route path="*" element={<Home />} />
