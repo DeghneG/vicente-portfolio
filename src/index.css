@@ -1,0 +1,113 @@
+@import "tailwindcss";
+@source not "../.claude";
+
+@theme {
+  --color-cream: #fff8fb;
+  --color-blush: #ffe4ef;
+  --color-petal: #ffc4dc;
+  --color-melody: #f783b0;
+  --color-berry: #c4366f;
+  --color-plum: #5e2a46;
+  --color-sky: #a9d8ea;
+  --color-butter: #ffe9a8;
+  --font-display: "Fredoka", ui-rounded, system-ui, sans-serif;
+  --font-body: "Nunito", "Zen Maru Gothic", ui-rounded, system-ui, sans-serif;
+  --radius-bubble: 1.5rem;
+  --shadow-soft: 0 18px 32px -14px rgb(196 54 111 / 0.38), 0 4px 10px -4px rgb(196 54 111 / 0.18);
+  --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+:root { color-scheme: light; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  overflow-x: clip;
+  font-family: var(--font-body);
+  color: var(--color-plum);
+  caret-color: var(--color-berry);
+  background-color: var(--color-cream);
+  /* soft gingham, like the My Melody card */
+  background-image:
+    linear-gradient(rgba(255, 196, 220, 0.28) 50%, transparent 50%),
+    linear-gradient(90deg, rgba(255, 196, 220, 0.28) 50%, transparent 50%);
+  background-size: 44px 44px;
+}
+
+h1, h2, h3 { font-family: var(--font-display); letter-spacing: 0.005em; line-height: 1.05; text-wrap: balance; }
+p { text-wrap: pretty; }
+
+@layer base {
+  a { color: inherit; text-underline-offset: 4px; }
+}
+
+/* Browser surfaces, themed */
+::selection { background: var(--color-melody); color: #fff; }
+:focus-visible { outline: 3px solid var(--color-berry); outline-offset: 3px; border-radius: 6px; }
+html { scrollbar-color: var(--color-melody) var(--color-blush); }
+
+/* Marker highlight behind a word, like a pink highlighter */
+mark.hl {
+  color: inherit;
+  background: linear-gradient(transparent 52%, var(--color-petal) 52% 92%, transparent 92%);
+  padding: 0 .12em;
+  margin: 0 -.12em;
+}
+
+@keyframes melody-bob {
+  0%, 100% { translate: 0 0; }
+  50% { translate: 0 -12px; }
+}
+.melody-float { animation: melody-bob 4s ease-in-out infinite; }
+
+@keyframes marquee {
+  to { translate: -50% 0; }
+}
+.marquee-track { display: flex; width: max-content; animation: marquee 28s linear infinite; }
+
+@keyframes pop {
+  0%, 100% { scale: 1; }
+  50% { scale: 1.18; }
+}
+.heart-pop { animation: pop 1.6s var(--ease-out-expo) infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .melody-float, .marquee-track, .heart-pop { animation: none; }
+}
+
+@layer components {
+.card {
+  background: #fff;
+  border: 2px solid var(--color-petal);
+  border-radius: var(--radius-bubble);
+  box-shadow: var(--shadow-soft);
+}
+
+/* Sticker-style tilt that straightens on hover. Uses `rotate` so GSAP's transform is untouched. */
+.sticker {
+  rotate: var(--tilt, 0deg);
+  transition: rotate .35s var(--ease-out-expo), translate .35s var(--ease-out-expo), box-shadow .35s;
+}
+.sticker:hover { rotate: 0deg; translate: 0 -6px; }
+
+.btn {
+  display: inline-flex; align-items: center; gap: .5rem;
+  padding: .8rem 1.5rem; border-radius: 999px;
+  background: var(--color-berry); color: #fff; font-weight: 700;
+  border: 2px solid var(--color-berry); text-decoration: none;
+  box-shadow: 0 10px 18px -8px rgb(196 54 111 / 0.55);
+  transition: translate .2s var(--ease-out-expo), box-shadow .2s;
+  cursor: pointer;
+}
+.btn:hover { translate: 0 -3px; box-shadow: 0 16px 22px -10px rgb(196 54 111 / 0.6); }
+.btn:active { translate: 0 1px; }
+.btn-ghost { background: #fff; color: var(--color-berry); border-color: var(--color-petal); box-shadow: 0 10px 18px -10px rgb(196 54 111 / 0.3); }
+.btn-ghost:hover { box-shadow: 0 16px 22px -12px rgb(196 54 111 / 0.4); }
+.chip {
+  display: inline-block; padding: .25rem .8rem; border-radius: 999px;
+  background: var(--color-blush); border: 1.5px solid var(--color-petal);
+  font-size: .85rem; font-weight: 600;
+}
+}
