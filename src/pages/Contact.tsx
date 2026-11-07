@@ -1,6 +1,7 @@
 import { useState, type FormEvent } from 'react'
 import { useReveal } from '../hooks/useReveal'
 import { Melody } from '../components/Melody'
+import { PageMeta } from '../components/PageMeta'
 
 const field =
   'w-full rounded-2xl border-2 border-petal bg-white px-4 py-3 text-plum placeholder:text-plum/50 focus:border-berry'
@@ -24,6 +25,7 @@ export default function Contact() {
 
   return (
     <div ref={ref} className="mx-auto grid max-w-5xl gap-10 px-5 pt-16 sm:grid-cols-[1.3fr_1fr]">
+      <PageMeta title="Contact" path="/contact" description="Placeholder: get in touch with Leighmarie." />
       <div>
         <h1 data-reveal className="m-0 text-6xl sm:text-8xl"><mark className="hl">Contact</mark></h1>
         <p data-reveal className="mt-3 text-lg">Send me a note — I read everything</p>

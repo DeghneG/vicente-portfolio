@@ -6,6 +6,7 @@ import { useReveal } from '../hooks/useReveal'
 import { Heart, Strawberry } from '../components/Bow'
 import { Melody } from '../components/Melody'
 import { Marquee } from '../components/Marquee'
+import { PageMeta } from '../components/PageMeta'
 import { SectionTitle } from '../components/SectionTitle'
 import { ProjectCard } from '../components/ProjectCard'
 import { projects } from '../data/projects'
@@ -33,6 +34,7 @@ export default function Home() {
 
   return (
     <div ref={ref} className="mx-auto max-w-5xl px-5">
+      <PageMeta path="/" />
       <section ref={heroRef} className="relative grid items-center gap-6 pb-4 pt-12 sm:grid-cols-[1.35fr_1fr] sm:pt-20">
         <div>
           <p className="m-0 mb-4 flex items-center gap-2 font-bold text-berry">

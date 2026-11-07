@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom'
 import { useReveal } from '../hooks/useReveal'
 import { SectionTitle } from '../components/SectionTitle'
 import { Melody } from '../components/Melody'
+import { PageMeta } from '../components/PageMeta'
 
 const details = [
   { label: 'Role', value: 'Update me' },
@@ -13,6 +14,7 @@ export default function RideSentinel() {
   const ref = useReveal<HTMLDivElement>()
   return (
     <article ref={ref} className="relative mx-auto max-w-4xl px-5 pt-16">
+      <PageMeta title="RideSentinel" path="/work/ridesentinel" description="Placeholder: RideSentinel case study — problem, process and results." />
       <Melody float rotate={6} className="absolute right-4 top-8 w-20 sm:w-28" />
       <Link to="/work" data-reveal className="font-bold text-berry">← Back to work</Link>
       <h1 data-reveal className="m-0 mt-4 text-5xl sm:text-7xl"><mark className="hl">RideSentinel</mark></h1>

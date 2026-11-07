@@ -1,6 +1,7 @@
 import { useReveal } from '../hooks/useReveal'
 import { SectionTitle } from '../components/SectionTitle'
 import { Melody } from '../components/Melody'
+import { PageMeta } from '../components/PageMeta'
 import { skillGroups } from '../data/skills'
 
 const timeline = [
@@ -13,6 +14,7 @@ export default function About() {
   const ref = useReveal<HTMLDivElement>()
   return (
     <div ref={ref} className="relative mx-auto max-w-4xl px-5 pt-16">
+      <PageMeta title="About" path="/about" description="Placeholder: background, experience, education and skills." />
       <Melody float rotate={6} className="absolute right-4 top-8 w-20 sm:w-32" />
       <h1 data-reveal className="m-0 text-6xl sm:text-8xl">About <mark className="hl">me</mark></h1>
 

@@ -2,6 +2,7 @@ import { NavLink, Link, Outlet, useLocation } from 'react-router-dom'
 import { useEffect } from 'react'
 import { Bow } from './Bow'
 import { Melody } from './Melody'
+import { PageTransition } from './PageTransition'
 
 const nav = [
   { to: '/', label: 'Home', end: true },
@@ -18,6 +19,7 @@ export function Layout() {
 
   return (
     <>
+      <PageTransition />
       <a href="#main" className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-50 btn">
         Skip to content
       </a>

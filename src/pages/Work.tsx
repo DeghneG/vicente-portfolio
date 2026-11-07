@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { useReveal } from '../hooks/useReveal'
 import { ProjectCard } from '../components/ProjectCard'
 import { Melody } from '../components/Melody'
+import { PageMeta } from '../components/PageMeta'
 import { projects, type Category } from '../data/projects'
 
 const filters: Array<'All' | Category> = ['All', 'Web Apps', 'Games']
@@ -13,6 +14,7 @@ export default function Work() {
 
   return (
     <div ref={ref} className="relative mx-auto max-w-5xl px-5 pt-16">
+      <PageMeta title="Work" path="/work" description="Placeholder: web apps and games, from prelim to final." />
       <Melody float rotate={-6} flip className="absolute right-6 top-6 w-20 sm:w-32" />
       <h1 data-reveal className="m-0 text-6xl sm:text-8xl"><mark className="hl">Work</mark></h1>
       <p data-reveal className="mt-3 max-w-xl text-lg">Coursework and projects, from prelim to final.</p>
