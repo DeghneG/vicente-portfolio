@@ -40,7 +40,7 @@ export default function CaseStudy() {
         {project.pdf && (
           <div data-reveal className="card p-2">
             <iframe
-              src={project.pdf}
+              src={`${project.pdf}#toolbar=0&navpanes=0&scrollbar=0&view=FitH`}
               title={`${project.title} PDF`}
               className="h-[80vh] w-full rounded-xl border-0"
             />

@@ -50,12 +50,15 @@ export const projects: Project[] = [
   {
     slug: 'final',
     title: 'Final Project',
-    blurb: 'Final project — placeholder.',
+    blurb: 'Digital Portfolio Sitemap — final project.',
     category: 'Final',
     role,
     tools,
     timeline: 'Update me',
     summary: 'Describe the problem the final project solves and summarize it here.',
+    pdf: '/projects/final/Vicente-Portfolio-Sitemap.pdf',
+    image: '/projects/final.png',
+    imageAlt: 'Digital Portfolio Sitemap for Leighmarie Abigail Vicente: Home, About, Work and Contact pages with their sections, and a footer navigation bar.',
   },
   {
     slug: 'capstone',
