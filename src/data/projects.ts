@@ -13,6 +13,8 @@ export type Project = {
   summary: string
   /** Source code repository, if public */
   github?: string
+  /** PDF in /public, embedded on the case study */
+  pdf?: string
   /** Screenshot in /public, shown on the card and the case study */
   image?: string
   imageAlt?: string
@@ -35,12 +37,13 @@ export const projects: Project[] = [
   {
     slug: 'midterm',
     title: 'Midterm Project',
-    blurb: 'Midterm project — placeholder.',
+    blurb: 'Morning Routine — midterm project.',
     category: 'Midterm',
     role,
     tools,
     timeline: 'Update me',
     summary: 'Describe the problem the midterm project solves and summarize it here.',
+    pdf: '/projects/midterm/Morning_Routine.pdf',
   },
   {
     slug: 'final',
