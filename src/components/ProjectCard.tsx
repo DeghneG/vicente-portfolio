@@ -18,7 +18,7 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
           src={project.image}
           alt={project.imageAlt ?? ''}
           loading="lazy"
-          className="aspect-[4/3] w-full rounded-xl object-cover"
+          className="aspect-[4/3] w-full rounded-xl bg-blush object-contain"
         />
       ) : (
         <div

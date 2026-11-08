@@ -44,6 +44,8 @@ export const projects: Project[] = [
     timeline: 'Update me',
     summary: 'Describe the problem the midterm project solves and summarize it here.',
     pdf: '/projects/midterm/Morning_Routine.pdf',
+    image: '/projects/midterm.png',
+    imageAlt: 'Morning Routine, a six-panel comic: a student sleeps through a 7:00 alarm, wakes at 8:00, runs to school, finds the doors closed and faces the teacher.',
   },
   {
     slug: 'final',
