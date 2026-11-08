@@ -3,7 +3,7 @@ export type Category = 'Prelim' | 'Midterm' | 'Final' | 'Capstone' | 'Personal'
 export type Project = {
   slug: string
   title: string
-  blurb: string
+  blurb?: string
   category: Category
   role: string
   tools: string
@@ -73,7 +73,6 @@ export const projects: Project[] = [
   {
     slug: 'classbridge',
     title: 'ClassBridge',
-    blurb: 'Personal project — placeholder.',
     category: 'Personal',
     role,
     tools,
@@ -87,7 +86,6 @@ export const projects: Project[] = [
   {
     slug: 'spotter-campus-tracker',
     title: 'Spotter Campus Tracker',
-    blurb: 'Personal project — placeholder.',
     category: 'Personal',
     role,
     tools,
@@ -101,7 +99,6 @@ export const projects: Project[] = [
   {
     slug: 'laundry-shop-management-system',
     title: 'Laundry Shop Management System',
-    blurb: 'Personal project — placeholder.',
     category: 'Personal',
     role,
     tools,

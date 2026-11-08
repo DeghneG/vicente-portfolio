@@ -29,7 +29,7 @@ export function ProjectCard({ project, index = 0 }: { project: Project; index?: 
         </div>
       )}
       <h3 className="m-0 mt-5 text-4xl text-berry">{project.title}</h3>
-      <p className="mb-0 mt-2">{project.blurb}</p>
+      {project.blurb && <p className="mb-0 mt-2">{project.blurb}</p>}
       <p className="mb-0 mt-5 font-bold text-berry">View more →</p>
     </>
   )
