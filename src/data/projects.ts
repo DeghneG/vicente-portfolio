@@ -13,6 +13,8 @@ export type Project = {
   summary: string
   /** Source code repository, if public */
   github?: string
+  /** Canva design (use the /view link, not /edit) */
+  canva?: string
   /** PDF in /public, embedded on the case study */
   pdf?: string
   /** Screenshot in /public, shown on the card and the case study */
@@ -27,12 +29,15 @@ export const projects: Project[] = [
   {
     slug: 'prelim',
     title: 'Prelim Project',
-    blurb: 'Preliminary project — placeholder.',
+    blurb: 'RideSentinel — prelim presentation.',
     category: 'Prelim',
     role,
     tools,
     timeline: 'Update me',
     summary: 'Describe the problem the prelim project solves and summarize it here.',
+    canva: 'https://www.canva.com/design/DAHQOVuEeF4/WpLm00FRtEakCNCuMPjckg/view',
+    image: '/projects/prelim.png',
+    imageAlt: 'RideSentinel title slide: A Standalone QR-Based Verification and Safety System for Informal Motorcycle Ride Services.',
   },
   {
     slug: 'midterm',

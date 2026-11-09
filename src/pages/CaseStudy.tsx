@@ -36,6 +36,12 @@ export default function CaseStudy() {
         </a>
       )}
 
+      {project.canva && (
+        <a data-reveal href={project.canva} target="_blank" rel="noreferrer" className="btn btn-ghost mt-6">
+          View on Canva ↗
+        </a>
+      )}
+
       <section className="mt-10">
         {project.pdf && (
           <div data-reveal className="card p-2">
