@@ -4,13 +4,13 @@ import { Bow, Daisy, Heart, MusicNote, Star, Strawberry } from './Bow'
 const img = (src: string) => <img src={src} alt="" draggable={false} className="h-20 w-auto" />
 
 const stickers: ReactNode[] = [
-  img('/melody.png'),
+  img('/melody.webp'),
   <Strawberry key="s" className="h-12" />,
   <Heart key="h" className="h-11" />,
-  img('/cute.png'),
+  img('/cute.webp'),
   <Star key="st" className="h-12" />,
   <Bow key="b" className="h-10" />,
-  img('/flower.png'),
+  img('/flower.webp'),
   <MusicNote key="m" className="h-12" />,
   <Daisy key="d" className="h-12" />,
 ]

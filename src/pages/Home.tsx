@@ -59,7 +59,7 @@ export default function Home() {
 
         <div data-hero-art className="relative mx-auto mt-10 w-72 sm:mt-0 sm:w-full">
           <div className="absolute inset-x-0 bottom-0 top-10 rounded-[58%_42%_55%_45%/50%_58%_42%_50%] bg-petal" />
-          <Melody src="/cute.png" float className="relative w-full" />
+          <Melody src="/cute.webp" float className="relative w-full" />
           <span data-pop className="absolute -left-2 top-16 w-10 -rotate-12">
             <Heart color="#f783b0" />
           </span>
@@ -116,7 +116,7 @@ export default function Home() {
       </section>
 
       <section className="relative left-1/2 mt-32 w-screen -translate-x-1/2 bg-berry px-5 pb-20 pt-24 text-center text-cream">
-        <Melody src="/flower.png" float rotate={-6} className="absolute -top-24 left-1/2 w-32 -translate-x-[120%] sm:-top-32 sm:w-44" />
+        <Melody src="/flower.webp" float rotate={-6} className="absolute -top-24 left-1/2 w-32 -translate-x-[120%] sm:-top-32 sm:w-44" />
         <h2 data-reveal className="mx-auto m-0 max-w-3xl text-4xl sm:text-6xl">Let's make something sweet together</h2>
         <p data-reveal className="mx-auto mt-4 max-w-md text-lg">Have a project, role, or idea? I'd love to hear about it.</p>
         <Link

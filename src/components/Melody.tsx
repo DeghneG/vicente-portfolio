@@ -12,7 +12,7 @@ type MelodyProps = {
 }
 
 /** Decorative My Melody cutout. Hidden from screen readers. */
-export function Melody({ className = '', rotate = 0, float = false, flip = false, src = '/melody.png' }: MelodyProps) {
+export function Melody({ className = '', rotate = 0, float = false, flip = false, src = '/melody.webp' }: MelodyProps) {
   return (
     <img
       src={src}

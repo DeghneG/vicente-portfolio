@@ -38,11 +38,11 @@ export const projects: Project[] = [
     timeline: 'Update me',
     summary: 'Describe the problem the prelim project solves and summarize it here.',
     canva: 'https://www.canva.com/design/DAHQOVuEeF4/WpLm00FRtEakCNCuMPjckg/view',
-    image: '/projects/prelim.png',
+    image: '/projects/prelim.webp',
     imageAlt: 'RideSentinel title slide: A Standalone QR-Based Verification and Safety System for Informal Motorcycle Ride Services.',
     extraImages: [
       {
-        src: '/projects/prelim-audio-lab.png',
+        src: '/projects/prelim-audio-lab.webp',
         alt: 'Audio lab worksheet comparing the original 44.1 kHz track with simulated 22.05 kHz, 8 kHz and 8-bit versions, with answers on the Nyquist theorem and the low pass filter versus the bitcrusher.',
       },
     ],
@@ -57,7 +57,7 @@ export const projects: Project[] = [
     timeline: 'Update me',
     summary: 'Describe the problem the midterm project solves and summarize it here.',
     pdf: '/projects/midterm/Morning_Routine.pdf',
-    image: '/projects/midterm.png',
+    image: '/projects/midterm.webp',
     imageAlt: 'Morning Routine, a six-panel comic: a student sleeps through a 7:00 alarm, wakes at 8:00, runs to school, finds the doors closed and faces the teacher.',
   },
   {
@@ -70,7 +70,7 @@ export const projects: Project[] = [
     timeline: 'Update me',
     summary: 'Describe the problem the final project solves and summarize it here.',
     pdf: '/projects/final/Vicente-Portfolio-Sitemap.pdf',
-    image: '/projects/final.png',
+    image: '/projects/final.webp',
     imageAlt: 'Digital Portfolio Sitemap for Leighmarie Abigail Vicente: Home, About, Work and Contact pages with their sections, and a footer navigation bar.',
   },
   {
@@ -93,7 +93,7 @@ export const projects: Project[] = [
     summary: 'Describe the problem ClassBridge solves and summarize the project here.',
     techStack: 'JavaScript, CSS, HTML',
     github: 'https://github.com/mirei-sayo/ClassBridge',
-    image: '/projects/classbridge.png',
+    image: '/projects/classbridge.webp',
     imageAlt: 'ClassBridge sign-in screen: a dark card with the ClassBridge logo, student email and password fields, and an orange Sign In button.',
   },
   {
@@ -106,7 +106,7 @@ export const projects: Project[] = [
     summary: 'Describe the problem Spotter Campus Tracker solves and summarize the project here.',
     techStack: 'HTML, Python, CSS, JavaScript',
     github: 'https://github.com/mirei-sayo/spotter-campus-tracker',
-    image: '/projects/spotter-campus-tracker.png',
+    image: '/projects/spotter-campus-tracker.webp',
     imageAlt: 'Spotter login screen: a dark page with the headline "Leave it. Track it. Score it back." and a Welcome to Spotter sign-in card.',
   },
   {

@@ -70,7 +70,7 @@ export function Layout() {
       </main>
 
       <footer className="relative mt-32 border-t-2 border-petal bg-blush">
-        <Melody src="/cute.png" className="absolute -top-20 right-6 w-24 sm:right-16 sm:-top-28 sm:w-32" />
+        <Melody src="/cute.webp" className="absolute -top-20 right-6 w-24 sm:right-16 sm:-top-28 sm:w-32" />
         <div className="mx-auto grid max-w-5xl gap-8 px-5 py-10 sm:grid-cols-4">
           <FooterCol title="Quick links">
             <Link to="/"><HomeIcon />Home</Link>
