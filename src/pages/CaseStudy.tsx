@@ -67,6 +67,9 @@ export default function CaseStudy() {
             Add wireframes, prototypes, and screenshots here.
           </div>
         )}
+        {project.extraImages?.map((img) => (
+          <img key={img.src} data-reveal src={img.src} alt={img.alt} className="card mt-8 w-full p-2" />
+        ))}
       </section>
 
       <nav aria-label="Project navigation" data-reveal className="mt-16 flex justify-between gap-4">

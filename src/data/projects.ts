@@ -20,6 +20,8 @@ export type Project = {
   /** Screenshot in /public, shown on the card and the case study */
   image?: string
   imageAlt?: string
+  /** Extra images shown under the main one on the case study */
+  extraImages?: { src: string; alt: string }[]
 }
 
 const role = 'UI/UX Designer'
@@ -38,6 +40,12 @@ export const projects: Project[] = [
     canva: 'https://www.canva.com/design/DAHQOVuEeF4/WpLm00FRtEakCNCuMPjckg/view',
     image: '/projects/prelim.png',
     imageAlt: 'RideSentinel title slide: A Standalone QR-Based Verification and Safety System for Informal Motorcycle Ride Services.',
+    extraImages: [
+      {
+        src: '/projects/prelim-audio-lab.png',
+        alt: 'Audio lab worksheet comparing the original 44.1 kHz track with simulated 22.05 kHz, 8 kHz and 8-bit versions, with answers on the Nyquist theorem and the low pass filter versus the bitcrusher.',
+      },
+    ],
   },
   {
     slug: 'midterm',
