@@ -21,8 +21,10 @@ export default function About() {
       <section className="mt-10">
         <SectionTitle>My story</SectionTitle>
         <p data-reveal className="max-w-2xl text-lg">
-          I'm Leighmarie Abigail Vicente, a developer and designer who enjoys building web apps and games.
-          Replace this paragraph with your background and story.
+          I'm Leighmarie Abigail Vicente, an artist and UI/UX designer who loves bringing ideas to life
+          across screens and canvases. I design interfaces and prototypes in Figma, build visuals and
+          presentations in Canva and Stitch, draw and illustrate in Ibis Paint, and polish everything
+          with careful editing until each piece feels cohesive, intentional and a little bit magical.
         </p>
         <p data-reveal className="max-w-2xl text-lg">
           <strong>Design philosophy:</strong> keep it simple, keep it kind, and make every interaction feel a

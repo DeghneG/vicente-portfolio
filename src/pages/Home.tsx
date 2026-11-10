@@ -49,7 +49,7 @@ export default function Home() {
             ))}
           </h1>
           <p data-reveal className="mt-6 max-w-lg text-lg">
-            I design and build web apps and games with a soft touch and sharp details.
+            I'm an artist and UI/UX designer crafting expressive interfaces, illustrations and edits with a soft touch and sharp details.
           </p>
           <div data-reveal className="mt-8 flex flex-wrap gap-3">
             <Link to="/multimedia" className="btn">See my work</Link>
@@ -97,8 +97,9 @@ export default function Home() {
           <span id="quick-about">Quick intro</span>
         </SectionTitle>
         <p data-reveal className="max-w-2xl text-xl">
-          I'm a student developer who loves turning ideas into friendly, usable interfaces. I care about
-          accessibility, good motion, and details people notice without being told.
+          I'm an artist and UI/UX designer who turns ideas into polished, expressive experiences. From
+          hand-drawn illustration and thoughtful editing to crisp interface design, I shape every detail
+          so it looks beautiful, feels effortless, and tells a story.
         </p>
         <div className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {skillGroups.map((g) => (
