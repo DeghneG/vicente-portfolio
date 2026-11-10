@@ -14,6 +14,6 @@ export const skillGroups = [
   },
   {
     name: 'Other',
-    items: ['Vite', 'npm', 'oxlint', 'Claude Code', 'Impeccable', 'gstack', 'Google Fonts'],
+    items: ['Vite', 'npm', 'Claude Code', 'Impeccable', 'gstack', 'Google Fonts'],
   },
 ]
