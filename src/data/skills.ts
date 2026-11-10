@@ -2,7 +2,7 @@
 export const skillGroups = [
   {
     name: 'Design',
-    items: ['Figma', 'Canva', 'Stitch', 'Ibis Paint'],
+    items: ['Figma', 'Canva', 'Stitch', 'Ibis Paint', 'CapCut'],
   },
   {
     name: 'Front end',
