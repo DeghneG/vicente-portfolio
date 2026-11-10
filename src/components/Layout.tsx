@@ -83,8 +83,7 @@ export function Layout() {
             <a href="/resume.pdf"><FileIcon />Resume (PDF)</a>
           </FooterCol>
           <FooterCol title="Social">
-            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer"><LinkedInIcon />LinkedIn</a>
-            <a href="https://github.com/" target="_blank" rel="noreferrer"><GitHubIcon />GitHub</a>
+            <a href="https://github.com/luvrgirlqq" target="_blank" rel="noreferrer"><GitHubIcon />GitHub</a>
           </FooterCol>
           <FooterCol title="Legal pages">
             <Link to="/privacy"><ShieldIcon />Privacy Policy</Link>
@@ -130,11 +129,6 @@ const BriefcaseIcon = () => <Icon><rect x="3" y="7" width="18" height="13" rx="2
 const MailIcon = () => <Icon><rect x="3" y="5" width="18" height="14" rx="2" /><path d="M3 7l9 6 9-6" /></Icon>
 const FileIcon = () => <Icon><path d="M6 3h8l5 5v13H6z" /><path d="M14 3v5h5" /></Icon>
 const ShieldIcon = () => <Icon><path d="M12 3l8 3v6c0 5-4 8-8 9-4-1-8-4-8-9V6z" /></Icon>
-const LinkedInIcon = () => (
-  <Icon fill>
-    <path d="M4 9h4v11H4zM6 3.5a2.3 2.3 0 110 4.6 2.3 2.3 0 010-4.6zM10 9h3.8v1.6c.6-1 1.9-1.9 3.8-1.9 3.5 0 4.4 2.3 4.4 5.4V20h-4v-5.2c0-1.3 0-2.9-1.8-2.9s-2.2 1.400-2.200 2.800V20h-4z" />
-  </Icon>
-)
 const GitHubIcon = () => (
   <Icon fill>
     <path d="M12 2a10 10 0 00-3.2 19.500c.5.100.7-.2.7-.5v-1.800c-2.800.6-3.400-1.200-3.400-1.200-.5-1.200-1.100-1.500-1.100-1.500-.9-.6.100-.6.100-.6 1 .1 1.500 1 1.500 1 .9 1.500 2.400 1.100 2.900.8.1-.7.4-1.100.6-1.400-2.200-.3-4.600-1.100-4.600-5 0-1.100.4-2 1-2.700-.1-.3-.5-1.300.1-2.700 0 0 .8-.3 2.800 1a9.600 9.600 0 015 0c1.900-1.300 2.800-1 2.800-1 .6 1.400.2 2.400.1 2.700.6.700 1 1.600 1 2.700 0 3.900-2.400 4.700-4.600 5 .4.300.7.900.7 1.800v2.700c0 .3.2.6.7.5A10 10 0 0012 2z" />

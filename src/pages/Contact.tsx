@@ -61,8 +61,7 @@ export default function Contact() {
         </section>
         <section data-reveal className="card p-6" aria-labelledby="profiles">
           <h2 id="profiles" className="m-0 mb-3 text-2xl text-berry">Profiles</h2>
-          <p className="m-0"><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LinkedIn</a></p>
-          <p className="m-0"><a href="https://github.com/" target="_blank" rel="noreferrer">GitHub</a></p>
+          <p className="m-0"><a href="https://github.com/luvrgirlqq" target="_blank" rel="noreferrer">GitHub</a></p>
         </section>
         <Melody float rotate={4} className="mx-auto w-28 sm:w-36" />
       </aside>
